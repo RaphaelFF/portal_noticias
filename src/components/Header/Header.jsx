@@ -57,17 +57,21 @@ export default function Header() {
 
   return (
     <header
-      className="bg-gray-900 text-white sticky top-0 z-50 shadow-md"
+      className="bg-gradient-to-b from-gray-900 to-gray-800 text-white sticky top-0 z-50 shadow-lg border-b border-gray-700 transition-all duration-300"
       role="banner"
     >
       {/* Layout Mobile */}
       {isMobile && (
-        <div className="h-20 flex justify-between items-center px-4 py-3">
+        <div className="h-20 px-4 py-4 flex justify-between items-center gap-4 animate-fadeIn">
           {/* Botão Hambúrguer */}
           <button
             ref={buttonRef}
             onClick={toggleMenu}
-            className="text-3xl hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+            className={`text-2xl p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded ${
+              isMenuOpen
+                ? 'text-blue-400 rotate-90'
+                : 'text-gray-300 hover:text-blue-400 active:scale-95'
+            }`}
             aria-label="Abrir menu de navegação"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -78,25 +82,27 @@ export default function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl font-bold hover:text-blue-400 transition-colors"
+            className="text-lg font-bold hover:text-blue-400 transition-colors flex-1 text-center hover:scale-105"
             title="Voltar para página inicial"
           >
             {SITE_NAME}
           </Link>
 
-          {/* Data */}
-          <DateDisplay />
+          {/* Data (menor em mobile) */}
+          <div className="text-xs text-gray-400 whitespace-nowrap">
+            <DateDisplay />
+          </div>
         </div>
       )}
 
       {/* Layout Desktop */}
       {!isMobile && (
-        <div className="px-6 md:px-8 py-4 md:py-6">
+        <div className="px-8 py-6 max-w-7xl mx-auto animate-fadeIn">
           {/* Linha 1: Logo + Data */}
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-700">
             <Link
               to="/"
-              className="text-2xl md:text-3xl font-bold hover:text-blue-400 transition-colors"
+              className="text-3xl font-bold text-white hover:text-blue-400 transition-all duration-300 hover:scale-105"
               title="Voltar para página inicial"
             >
               {SITE_NAME}

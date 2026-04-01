@@ -16,26 +16,26 @@ export function MobileMenu({ isOpen, onClose }) {
     <>
       {/* Backdrop semi-transparente */}
       <div
-        className="fixed inset-0 bg-black/50 z-40 md:hidden"
+        className="fixed inset-0 bg-black/60 z-40 md:hidden backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Menu lateral */}
       <nav
-        className="fixed left-0 top-20 w-64 bg-gray-900 text-white h-screen z-50 overflow-y-auto"
+        className="fixed left-0 top-20 w-72 bg-gray-900 text-white h-[calc(100vh-80px)] z-50 overflow-y-auto shadow-xl border-r border-gray-700 transition-all duration-300 animate-slideInLeft"
         aria-label="Menu de navegação mobile"
       >
-        <ul className="space-y-0 p-0">
+        <ul className="space-y-0 p-2">
           {CATEGORIES.map((category) => (
             <li key={category.id}>
               <Link
                 to={`/categorias/${category.slug}`}
                 onClick={onClose}
-                className={`block px-4 py-3 border-l-4 transition-colors ${
+                className={`block px-4 py-3 rounded-md font-medium transition-all duration-200 ${
                   slug === category.slug
-                    ? 'bg-blue-900/30 border-blue-500 text-blue-300'
-                    : 'border-gray-700 hover:bg-gray-800 text-gray-200 hover:text-white'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
                 }`}
               >
                 {category.name}

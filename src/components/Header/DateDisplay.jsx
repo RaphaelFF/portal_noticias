@@ -9,7 +9,7 @@ export function DateDisplay() {
   const date = useDate()
 
   return (
-    <div className="text-xs md:text-sm text-gray-400">
+    <div className="text-xs md:text-sm text-gray-400 font-medium" aria-live="polite" aria-label="Data atual">
       {date}
     </div>
   )

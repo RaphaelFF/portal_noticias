@@ -13,15 +13,15 @@ export function CategoryMenu() {
   const slug = location.pathname.split('/')[2]
 
   return (
-    <nav className="hidden md:flex items-center gap-4 md:gap-6 flex-wrap">
+    <nav className="hidden md:flex items-center gap-1 flex-wrap" role="navigation">
       {CATEGORIES.map((category) => (
         <Link
           key={category.id}
           to={`/categorias/${category.slug}`}
-          className={`text-sm md:text-base transition-colors ${
+          className={`px-3 py-2 text-sm md:text-base font-medium rounded-md transition-all duration-200 ${
             slug === category.slug
-              ? 'text-blue-400 border-b-2 border-blue-600'
-              : 'text-gray-300 hover:text-blue-400'
+              ? 'bg-blue-600 text-white shadow-md'
+              : 'text-gray-300 hover:text-white hover:bg-gray-800'
           }`}
           title={`Notícias de ${category.name}`}
         >
