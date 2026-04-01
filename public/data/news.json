@@ -1,0 +1,64 @@
+{
+  "titulo": "PortalNoticias - Últimas Notícias",
+  "descricao": "As melhores notícias do dia em um só lugar",
+  "manchetaPrincipal": {
+    "id": "001",
+    "slug": "eleicoes-2026-resultado",
+    "titulo": "Resultado das eleições 2026: vencedor eleito com 52% dos votos",
+    "resumo": "Candidato vence em votação acirrada. Resultado divulgado após apuração de 95% das urnas.",
+    "imagem": "https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=1200&h=600&fit=crop",
+    "imagemAlt": "Candidato vencedor fazendo discurso de vitória",
+    "data_publicacao": "2026-04-01T09:15:00Z",
+    "ultima_atualizacao": "2026-04-01T10:30:00Z",
+    "autor": "Maria Silva",
+    "fonte": "https://example.com/agencia"
+  },
+  "noticiasSecundarias": [
+    {
+      "id": "002",
+      "slug": "inflacao-cai-03-percentuais",
+      "titulo": "Inflação cai 0,3 pontos percentuais em março",
+      "resumo": "Índice de preços registra queda em comparação com mês anterior.",
+      "imagem": "https://images.unsplash.com/photo-1526304640581-d334cda1d0b7?w=400&h=300&fit=crop",
+      "imagemAlt": "Gráfico de deflação",
+      "data_publicacao": "2026-03-31T14:00:00Z",
+      "autor": "João Santos",
+      "fonte": "https://example.com/economia"
+    },
+    {
+      "id": "003",
+      "slug": "ia-nova-regulacao",
+      "titulo": "Nova regulação para IA entra em vigor",
+      "resumo": "Legislação estabelece padrões de segurança e transparência.",
+      "imagem": "https://images.unsplash.com/photo-1677442d019cecf8c6ccfa1c99721f5a76cea2a3f?w=400&h=300&fit=crop",
+      "imagemAlt": "Símbolo de inteligência artificial",
+      "data_publicacao": "2026-03-30T10:45:00Z",
+      "autor": "Laura Mendes",
+      "fonte": "https://example.com/tecnologia"
+    },
+    {
+      "id": "004",
+      "slug": "clima-projecoes-2026",
+      "titulo": "Previsões climáticas apontam verão 8% mais quente",
+      "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
+      "imagem": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+      "imagemAlt": "Mapa de previsão meteorológica",
+      "data_publicacao": "2026-03-29T16:20:00Z",
+      "autor": "Carlos Oliveira",
+      "fonte": "https://example.com/ciencia"
+    },
+    {
+      "id": "005",
+      "slug": "esporte-copa-mundial",
+      "titulo": "Seleção avança para semi-final da Copa",
+      "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
+      "imagem": "https://images.unsplash.com/photo-1461922996959-09650f4599fb?w=400&h=300&fit=crop",
+      "imagemAlt": "Jogador comemorando gol",
+      "data_publicacao": "2026-03-28T20:30:00Z",
+      "autor": "Pedro Costa",
+      "fonte": "https://example.com/esportes"
+    }
+  ],
+  "ultimaAtualizacao": "2026-04-01T15:00:00Z",
+  "versao": "1.0.0"
+}

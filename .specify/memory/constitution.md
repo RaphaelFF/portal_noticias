@@ -1,50 +1,70 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+SYNC IMPACT REPORT — Constitution v1.0.0 (Initial)
+Version: 1.0.0 (NEW)
+Ratified: 2026-04-01
+Principles: Acessibilidade, Performance, Credibilidade (3, no tests required)
+Templates updated: ✅ All referenced
+Framework: React + Tailwind
+Project scope: Simples e pequeno (no automated tests)
+-->
+
+# PortalNoticias Constitution
+
+Uma aplicação web de portal de notícias construída com React e Tailwind CSS. Este projeto prioriza código limpo, acessibilidade, performance e credibilidade, mantendo simplicidade arquitetural.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Acessibilidade (A11y)
+Todo conteúdo DEVE ser acessível a todos os usuários, independentemente de suas capacidades.
+- Semântica HTML correta (use `<article>`, `<section>`, `<nav>`, etc. apropriadamente)
+- Contraste mínimo WCAG AA (4.5:1 para textos, 3:1 para componentes)
+- Navegação por teclado totalmente funcional (Tab, Enter, Esc)
+- Labels explícitos em formulários e campos de entrada
+- Imagens com `alt` text descritivo ou `aria-label` quando necessário
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Performance
+O portal DEVE carregar e responder rapidamente para oferecer melhor experiência.
+- First Contentful Paint (FCP) < 1.5s em conexão 3G
+- Lazy loading de imagens e componentes não-críticos
+- CSS e JavaScript otimizados e minificados
+- Evitar renderizações desnecessárias (React.memo, useMemo quando apropriado)
+- Bundles de código mantidos pequenos e focados
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Credibilidade
+Cada notícia DEVE ser confiável e rastreável até sua fonte.
+- Byline claro com autores e data de publicação
+- Links para fontes originais sempre visíveis
+- Últimas atualizações/correções documentadas
+- Não há gosto editorial (mantém tom neutro e informativo)
+- Metadata estruturada (title, description para SEO básico)
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Restrições Técnicas
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+**Stack Obrigatório:**
+- Frontend: React 18+
+- Styling: Tailwind CSS
+- Sem testes automatizados (este é um projeto pequeno e simples)
+- Sem dependências pesadas ou frameworks específicos para features simples
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+**Arquitetura:**
+- Componentes React funcionais e hooks
+- Estrutura de pastas: `/components`, `/pages`, `/utils`, `/styles`
+- Máximo 2 níveis de aninhamento em estrutura de folders
+- Evitar "pasta utils" almoxarifado refatorar features quando crescerem
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Clean Code Guidelines
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- **Nomes significativos**: variáveis, funções e componentes devem explicar seu propósito
+- **Funções pequenas**: máximo 20 linhas por função (refatore se exceder)
+- **DRY (Don't Repeat Yourself)**: extraia lógica reutilizável em utilitários ou hooks
+- **Sem código morto**: remova console.logs, imports não usados, comentários desatualizados
+- **Comments quando necessário**: explicar *por quê*, não *o quê* (o código já diz o quê)
+- **Consistent formatting**: use Prettier com config padrão do projeto
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Toda mudança DEVE respeitar os três princípios acima. Se uma feature conflitar com Acessibilidade, Performance ou Credibilidade, discuta com o time antes de implementar.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Alterações à constituição requerem consenso de contributors principais e documentação da mudança.
+
+**Version**: 1.0.0 | **Ratified**: 2026-04-01 | **Last Amended**: 2026-04-01
