@@ -56,12 +56,8 @@ O header **não precisa de banco de dados**. Dados são estáticos:
 export const CATEGORIES = [
   { id: 'ultimas', name: 'ÚLTIMAS NOTÍCIAS', slug: 'ultimas' },
   { id: 'cultura', name: 'CULTURA', slug: 'cultura' },
-  { id: 'direitos', name: 'DIREITOS HUMANOS', slug: 'direitos-humanos' },
-  { id: 'economia', name: 'ECONOMIA', slug: 'economia' },
   { id: 'educacao', name: 'EDUCAÇÃO', slug: 'educacao' },
   { id: 'esportes', name: 'ESPORTES', slug: 'esportes' },
-  { id: 'geral', name: 'GERAL', slug: 'geral' },
-  { id: 'internacional', name: 'INTERNACIONAL', slug: 'internacional' },
   { id: 'justica', name: 'JUSTIÇA', slug: 'justica' },
   { id: 'ambiente', name: 'MEIO AMBIENTE', slug: 'meio-ambiente' },
   { id: 'politica', name: 'POLÍTICA', slug: 'politica' },

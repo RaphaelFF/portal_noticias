@@ -37,7 +37,7 @@ Criar um header profissional e responsivo para o portal de notícias, com navega
 **Contexto**: Preciso encontrar notícias de um assunto específico
 **AC**:
 - ✅ Menu de categorias exibido horizontalmente em desktop
-- ✅ Categorias): ÚLTIMAS NOTÍCIAS, CULTURA, DIREITOS HUMANOS, ECONOMIA, EDUCAÇÃO, ESPORTES, GERAL, INTERNACIONAL, JUSTIÇA, MEIO AMBIENTE, POLÍTICA, SAÚDE
+- ✅ Categorias): ÚLTIMAS NOTÍCIAS, CULTURA, ECONOMIA, EDUCAÇÃO, ESPORTES, MEIO AMBIENTE, POLÍTICA, SAÚDE
 - ✅ Hover em categoria mostra destaque
 - ✅ Link ativo mostra qual categoria estou visualizando
 
@@ -64,7 +64,7 @@ Criar um header profissional e responsivo para o portal de notícias, com navega
 - Ao clicar, abrir menu lateral
 
 **FR-003**: Menu lateral/dropdown mobile
-- Listar todas 12 categorias
+- Listar todas 8 categorias
 - Cada categoria é link
 - Menu fecha ao clicar fora (outside click)
 - Menu fecha ao clicar em categoria
@@ -75,7 +75,7 @@ Criar um header profissional e responsivo para o portal de notícias, com navega
 - Posicionado à direita
 
 **FR-005**: Menu de categorias em desktop
-- Exibir 12 categorias em linha horizontal
+- Exibir 8 categorias em linha horizontal
 - Aparecer apenas em md:+ (> 768px)
 - Cada categoria é link navegável
 - Hover mostra destaque visual

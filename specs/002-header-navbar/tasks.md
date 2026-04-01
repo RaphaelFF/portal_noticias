@@ -11,7 +11,7 @@
 Preparar projeto para header, criar pastas, configurar rotas.
 
 - [ ] T001 Criar pastas: `src/components/Header/`, `src/hooks/`, `src/styles/`
-- [ ] T002 Criar arquivo `src/utils/categories.js` com array de categorias (12 items)
+- [ ] T002 Criar arquivo `src/utils/categories.js` com array de categorias (8 items)
 - [ ] T003 [P] Criar arquivo `src/hooks/useMediaQuery.js` (detecta breakpoints)
 - [ ] T004 [P] Criar arquivo `src/hooks/useDate.js` (data/hora atualizada)
 - [ ] T005 Criar rota nova `GET /categorias/:slug` em React Router
@@ -34,7 +34,7 @@ Criar componentes React com estrutura HTML semântica, SEM styling yet.
 
 - [ ] T009 [P] Criar `MobileMenu.jsx`
   - Props: isOpen, onClose, categories, onCategoryClick
-  - Renderiza 12 Links (um para cada categoria)
+  - Renderiza 8 Links (um para cada categoria)
   - HTML semântico (nav > ul > li)
 
 - [ ] T010 [P] Criar `CategoryMenu.jsx`
