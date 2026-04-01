@@ -9,17 +9,28 @@ import { useNews } from './useNews'
  * @returns {object} { news: array de notícias filtradas, loading, error }
  */
 export function useNewsByCategory(categorySlug) {
-  const { news, loading, error } = useNews()
+  const { data, loading, error } = useNews()
 
   // Filtrar notícias por categoria usando useMemo para performance
   const filteredNews = useMemo(() => {
-    if (!news || !categorySlug) return []
+    if (!data || !categorySlug) return []
 
-    return news.filter((noticia) => {
-      // Comparar categoria (case-insensitive para segurança)
+    // Combinar manchetaPrincipal + noticiasSecundarias
+    const allNews = []
+    
+    if (data.manchetaPrincipal) {
+      allNews.push(data.manchetaPrincipal)
+    }
+    
+    if (data.noticiasSecundarias && Array.isArray(data.noticiasSecundarias)) {
+      allNews.push(...data.noticiasSecundarias)
+    }
+
+    // Filtrar por categoria (case-insensitive)
+    return allNews.filter((noticia) => {
       return noticia.categoria?.toLowerCase() === categorySlug.toLowerCase()
     })
-  }, [news, categorySlug])
+  }, [data, categorySlug])
 
   return {
     news: filteredNews,

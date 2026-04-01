@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { CATEGORIES } from '../utils/categories'
 import { useNewsByCategory } from '../hooks/useNewsByCategory'
-import { NewsGrid } from '../components/NewsGrid'
+import NewsGrid from '../components/NewsGrid'
 
 /**
  * Página que exibe notícias de uma categoria específica
@@ -93,7 +93,7 @@ export default function CategoryPage() {
         </div>
 
         {/* Grid de notícias */}
-        <NewsGrid news={news} />
+        <NewsGrid articles={news} />
       </main>
     </div>
   )
