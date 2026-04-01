@@ -8,6 +8,7 @@
     "resumo": "Candidato vence em votação acirrada. Resultado divulgado após apuração de 95% das urnas.",
     "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775080922/industria_dl9kkd.jpg",
     "imagemAlt": "Candidato vencedor fazendo discurso de vitória",
+    "categoria": "politica",
     "data_publicacao": "2026-04-01T09:15:00Z",
     "ultima_atualizacao": "2026-04-01T10:30:00Z",
     "autor": "Maria Silva",
@@ -16,11 +17,12 @@
   "noticiasSecundarias": [
     {
       "id": "002",
-      "slug": "inflacao-cai-03-percentuais",
+      "slug": "inflacao-marco-2026",
       "titulo": "Inflação cai 0,3 pontos percentuais em março",
       "resumo": "Índice de preços registra queda em comparação com mês anterior.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081355/3_n2vdld.jpg",
       "imagemAlt": "Gráfico de deflação",
+      "categoria": "economia",
       "data_publicacao": "2026-03-31T14:00:00Z",
       "autor": "João Santos",
       "fonte": "https://example.com/economia"
@@ -32,6 +34,7 @@
       "resumo": "Legislação estabelece padrões de segurança e transparência.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081354/1_mar9rn.jpg",
       "imagemAlt": "Símbolo de inteligência artificial",
+      "categoria": "educacao",
       "data_publicacao": "2026-03-30T10:45:00Z",
       "autor": "Laura Mendes",
       "fonte": "https://example.com/tecnologia"
@@ -43,6 +46,7 @@
       "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081355/4_ceaorp.png",
       "imagemAlt": "Mapa de previsão meteorológica",
+      "categoria": "ambiente",
       "data_publicacao": "2026-03-29T16:20:00Z",
       "autor": "Carlos Oliveira",
       "fonte": "https://example.com/ciencia"
@@ -54,6 +58,7 @@
       "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081355/2_dbtkpa.jpg",
       "imagemAlt": "Jogador comemorando gol",
+      "categoria": "esportes",
       "data_publicacao": "2026-03-28T20:30:00Z",
       "autor": "Pedro Costa",
       "fonte": "https://example.com/esportes"
