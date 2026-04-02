@@ -23,7 +23,7 @@ export function MobileMenu({ isOpen, onClose }) {
 
       {/* Menu lateral */}
       <nav
-        className="fixed left-0 top-20 w-72 bg-gray-900 text-white h-[calc(100vh-80px)] z-50 overflow-y-auto shadow-xl border-r border-gray-700 transition-all duration-300 animate-slideInLeft"
+        className="fixed left-0 top-20 w-72 bg-brasil-blue text-white h-[calc(100vh-80px)] z-50 overflow-y-auto shadow-xl transition-all duration-300 animate-slideInLeft"
         aria-label="Menu de navegação mobile"
       >
         <ul className="space-y-0 p-2">
@@ -32,10 +32,10 @@ export function MobileMenu({ isOpen, onClose }) {
               <Link
                 to={`/categorias/${category.slug}`}
                 onClick={onClose}
-                className={`block px-4 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`block px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
                   slug === category.slug
-                    ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                    ? 'bg-brasil-yellow text-brasil-blue shadow-md'
+                    : 'text-white hover:bg-brasil-yellow/20 hover:text-brasil-yellow'
                 }`}
               >
                 {category.name}

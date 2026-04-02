@@ -16,8 +16,8 @@ export default function Home() {
     return (
       <main className="min-h-screen bg-white flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600" />
-          <p className="text-lg text-gray-600 font-medium">Carregando notícias...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brasil-green" />
+          <p className="text-lg text-neutral-dark font-medium">Carregando notícias...</p>
         </div>
       </main>
     )
@@ -27,11 +27,11 @@ export default function Home() {
     return (
       <main className="min-h-screen bg-white flex items-center justify-center px-4">
         <div className="text-center max-w-md">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Erro ao carregar</h1>
+          <h1 className="text-2xl font-bold text-brasil-blue mb-2">Erro ao carregar</h1>
           <p className="text-lg text-red-600 mb-4">{ERROR_MESSAGES.LOADING_ERROR}</p>
           <button
             onClick={() => window.location.reload()}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="bg-brasil-green text-white px-6 py-2 rounded-lg font-semibold hover:bg-brasil-yellow hover:text-brasil-blue transition-colors"
           >
             Tentar novamente
           </button>
@@ -44,8 +44,8 @@ export default function Home() {
     return (
       <main className="min-h-screen bg-white flex items-center justify-center px-4">
         <div className="text-center max-w-md">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Sem notícias</h1>
-          <p className="text-lg text-gray-600">{ERROR_MESSAGES.NO_NEWS}</p>
+          <h1 className="text-2xl font-bold text-brasil-blue mb-2">Sem notícias</h1>
+          <p className="text-lg text-neutral-dark">{ERROR_MESSAGES.NO_NEWS}</p>
         </div>
       </main>
     )

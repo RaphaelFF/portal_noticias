@@ -9,9 +9,9 @@ export default function NewsCard({ news }) {
       className="group flex flex-col h-full"
       aria-label={news.titulo}
     >
-      <article className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:border-gray-300 flex flex-col h-full hover:bg-gray-50">
+      <article className="bg-white rounded-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
         {/* Imagem */}
-        <div className="relative overflow-hidden bg-gray-200 h-48 flex-shrink-0">
+        <div className="relative overflow-hidden bg-neutral-light h-48 flex-shrink-0">
           <img
             src={news.imagem}
             alt={news.imagemAlt}
@@ -20,23 +20,29 @@ export default function NewsCard({ news }) {
             width={400}
             height={300}
           />
+          {/* Badge Categoria (se existir) */}
+          {news.categoria && (
+            <div className="absolute top-3 left-3 bg-brasil-yellow text-brasil-blue px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
+              {news.categoria.charAt(0).toUpperCase() + news.categoria.slice(1)}
+            </div>
+          )}
         </div>
 
         {/* Conteúdo */}
-        <div className="p-5 flex flex-col flex-grow space-y-3">
+        <div className="p-4 flex flex-col flex-grow space-y-3">
           {/* Título */}
-          <h3 className="text-lg font-bold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
+          <h3 className="text-base font-bold text-brasil-blue line-clamp-2 group-hover:text-brasil-green transition-colors">
             {news.titulo}
           </h3>
 
           {/* Autor */}
-          <p className="text-sm text-gray-600 font-medium">{news.autor}</p>
+          <p className="text-xs text-neutral-dark font-semibold">{news.autor}</p>
 
           {/* Spacer */}
           <div className="flex-grow" />
 
           {/* CTA Link */}
-          <span className="text-sm font-semibold text-blue-600 group-hover:text-blue-700 flex items-center gap-1 transition-colors">
+          <span className="text-sm font-semibold text-brasil-green group-hover:text-brasil-yellow flex items-center gap-1 transition-colors">
             Ler mais
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </span>
