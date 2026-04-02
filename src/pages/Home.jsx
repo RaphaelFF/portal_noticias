@@ -55,7 +55,13 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <NewsFeatured news={data.manchetaPrincipal} />
+      {/* Manchete Principal com Carrossel + Sidebar */}
+      <NewsFeatured
+        news={[
+          data.manchetaPrincipal,
+          ...(data.noticiasSecundarias ? data.noticiasSecundarias.slice(0, 4) : [])
+        ]}
+      />
       
       {/* Seção: Últimas Notícias (top 4, excluindo manchete) */}
       <LatestNewsSection excludedNewsIds={[data.manchetaPrincipal.id]} />

@@ -1,89 +1,36 @@
-import { Link } from 'react-router-dom'
+/**
+ * Componente NewsFeatured / Manchete Principal
+ * Layout com carrossel dinâmico (2/3) + sidebar estática (1/3)
+ * Feature 004: Layout da Manchete Principal
+ */
+import FeaturedCarousel from './FeaturedCarousel'
+import FeaturedSidebar from './FeaturedSidebar'
 
-export default function NewsFeatured({ news }) {
-  if (!news) return null
+export default function NewsFeatured({ news = [] }) {
+  if (!news || news.length === 0) return null
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString)
-    return new Intl.DateTimeFormat('pt-BR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    }).format(date)
-  }
+  // Separar notícias para carrossel e sidebar
+  const carouselNews = news.slice(0, 3) // Primeiras 3 notícias para carrossel
+  const sidebarNews = news.slice(3, 5) // Próximas 2 notícias para sidebar
+
+  // Se não há notícias suficientes para carrossel, não renderizar
+  if (carouselNews.length === 0) return null
 
   return (
-    <article className="text-neutral-dark" aria-label="Manchete principal">
-      <div className="max-w-7xl mx-auto px-4 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Imagem - mobile em cima, desktop à esquerda */}
-        <Link
-          to={`/noticias/${news.slug}`}
-          className="order-1 md:order-1 group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-          tabIndex="0"
-        >
-          <img
-            src={news.imagem}
-            alt={news.imagemAlt}
-            loading="eager"
-            className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
-            width={800}
-            height={450}
-          />
-        </Link>
+    <article
+      className="max-w-7xl mx-auto px-4 py-8 md:py-12"
+      aria-label="Manchete principal"
+    >
+      {/* Grid: 2/3 para carrossel, 1/3 para sidebar */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Carrossel - 2/3 */}
+        <div className="md:col-span-2">
+          <FeaturedCarousel news={carouselNews} />
+        </div>
 
-        {/* Texto - mobile embaixo, desktop à direita */}
-        <div className="flex flex-col justify-center order-2 md:order-2 space-y-6">
-          <Link
-            to={`/noticias/${news.slug}`}
-            className="group"
-            tabIndex="0"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-brasil-blue group-hover:text-brasil-green transition-colors">
-              {news.titulo}
-            </h1>
-          </Link>
-
-          {/* Resumo */}
-          {news.resumo && (
-            <p className="text-lg md:text-xl text-neutral-dark/80 leading-relaxed line-clamp-3">
-              {news.resumo}
-            </p>
-          )}
-
-          {/* Byline - autor • data • fonte */}
-          <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-neutral-dark/70 pt-2 border-t border-neutral-dark/20">
-            <p className="font-semibold text-neutral-dark">{news.autor}</p>
-            <span className="text-neutral-dark/40">•</span>
-            <time className="text-neutral-dark/70" dateTime={news.data_publicacao}>
-              {formatDate(news.data_publicacao)}
-            </time>
-            {news.fonte && (
-              <>
-                <span className="text-neutral-dark/40">•</span>
-                <a
-                  href={news.fonte}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brasil-green hover:text-brasil-green-light hover:underline transition-colors focus:ring-2 focus:ring-brasil-yellow focus:outline-none rounded px-1"
-                  aria-label={`Fonte: ${news.fonte}`}
-                >
-                  Fonte
-                </a>
-              </>
-            )}
-          </div>
-
-          {/* CTA Button */}
-          <Link
-            to={`/noticias/${news.slug}`}
-            className="self-start mt-4 bg-brasil-yellow text-brasil-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-brasil-yellow-dark focus:ring-2 focus:ring-brasil-yellow focus:outline-none transition-all duration-200 shadow-md hover:shadow-lg group"
-            aria-label={`Leia a notícia: ${news.titulo}`}
-          >
-            <span className="flex items-center gap-2">
-              Leia a notícia completa
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </span>
-          </Link>
+        {/* Sidebar - 1/3 */}
+        <div className="md:col-span-1">
+          <FeaturedSidebar news={sidebarNews} />
         </div>
       </div>
     </article>
