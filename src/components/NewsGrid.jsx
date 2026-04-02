@@ -15,7 +15,7 @@ export default function NewsGrid({ articles }) {
     <section className="max-w-7xl mx-auto px-4 py-16 md:py-20 bg-neutral-light">
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-brasil-blue mb-2">
-          Notícias do dia
+          Ultimas Notícias
         </h2>
         <div className="h-1 w-16 bg-brasil-yellow rounded" aria-hidden="true" />
       </div>

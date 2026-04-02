@@ -27,21 +27,29 @@ export function MobileMenu({ isOpen, onClose }) {
         aria-label="Menu de navegação mobile"
       >
         <ul className="space-y-0 p-2">
-          {CATEGORIES.map((category) => (
-            <li key={category.id}>
-              <Link
-                to={`/categorias/${category.slug}`}
-                onClick={onClose}
-                className={`block px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  slug === category.slug
-                    ? 'bg-brasil-yellow text-brasil-blue shadow-md'
-                    : 'text-white hover:bg-brasil-yellow/20 hover:text-brasil-yellow'
-                }`}
-              >
-                {category.name}
-              </Link>
-            </li>
-          ))}
+          {CATEGORIES.map((category) => {
+            // Se for 'INICIO', redirecionar para home; senão para categoria
+            const linkPath = category.id === 'inicio' ? '/' : `/categorias/${category.slug}`
+            const isActive = category.id === 'inicio' 
+              ? location.pathname === '/'
+              : location.pathname.split('/')[2] === category.slug
+
+            return (
+              <li key={category.id}>
+                <Link
+                  to={linkPath}
+                  onClick={onClose}
+                  className={`block px-4 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    isActive
+                      ? 'bg-brasil-yellow text-brasil-blue shadow-md'
+                      : 'text-white hover:bg-brasil-yellow/20 hover:text-brasil-yellow'
+                  }`}
+                >
+                  {category.name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </>
