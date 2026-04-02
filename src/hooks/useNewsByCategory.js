@@ -4,11 +4,16 @@ import { useNews } from './useNews'
 /**
  * Hook para filtrar notícias por categoria
  * Feature 002: Header/Navbar - Navegação por categorias
+ * Feature 003: Seções de categorias na Home
  * 
  * @param {string} categorySlug - O slug da categoria (ex: 'economia', 'esportes')
+ * @param {object} options - Opções adicionais
+ * @param {array} options.excludeIds - IDs de notícias a excluir (ex: manchete principal)
+ * @param {number} options.limit - Número máximo de notícias a retornar
  * @returns {object} { news: array de notícias filtradas, loading, error }
  */
-export function useNewsByCategory(categorySlug) {
+export function useNewsByCategory(categorySlug, options = {}) {
+  const { excludeIds = [], limit = null } = options
   const { data, loading, error } = useNews()
 
   // Filtrar notícias por categoria usando useMemo para performance
@@ -27,10 +32,22 @@ export function useNewsByCategory(categorySlug) {
     }
 
     // Filtrar por categoria (case-insensitive)
-    return allNews.filter((noticia) => {
-      return noticia.categoria?.toLowerCase() === categorySlug.toLowerCase()
+    let filtered = allNews.filter((noticia) => {
+      // Verificar categoria
+      const matchesCategory = noticia.categoria?.toLowerCase() === categorySlug.toLowerCase()
+      // Verificar exclusão
+      const isExcluded = excludeIds.includes(noticia.id)
+      
+      return matchesCategory && !isExcluded
     })
-  }, [data, categorySlug])
+
+    // Aplicar limite se especificado
+    if (limit && limit > 0) {
+      filtered = filtered.slice(0, limit)
+    }
+
+    return filtered
+  }, [data, categorySlug, excludeIds, limit])
 
   return {
     news: filteredNews,
