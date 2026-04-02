@@ -26,27 +26,19 @@ export default function LatestNewsSection({ excludedNewsIds = [] }) {
       allNews.push(...data.noticiasSecundarias)
     }
 
-    // Filtrar excluindo IDs passados
-    let filtered = allNews.filter((noticia) => !excludedNewsIds.includes(noticia.id))
+      // Filtrar excluindo IDs passados
+      let filtered = allNews.filter((noticia) => !excludedNewsIds.includes(noticia.id))
 
-    // Limitar a 4 notícias
-    return filtered.slice(0, 4)
-  }, [data, excludedNewsIds])
+      // Ordenar por data de publicação (mais recente primeiro)
+      filtered.sort((a, b) => {
+        const dateA = new Date(a.data_publicacao).getTime()
+        const dateB = new Date(b.data_publicacao).getTime()
+        return dateB - dateA
+      })
 
-  // Estado de erro
-  if (error) {
-    return (
-      <section className="bg-white px-4 py-12 md:py-16" aria-label="Seção Últimas Notícias">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-h2 text-brasil-blue mb-4">Últimas Notícias</h2>
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-            <p className="text-red-700 font-medium">Erro ao carregar notícias</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
+      // Limitar a 4 notícias
+      return filtered.slice(0, 4)
+    }, [data, excludedNewsIds])
   // Não renderizar se vazio
   if (!loading && latestNews.length === 0) {
     return null

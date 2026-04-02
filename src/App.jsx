@@ -12,7 +12,7 @@ export default function App() {
       <Header />
 
       {/* Sticky Category Menu (Desktop only) */}
-      <div className="hidden md:block sticky top-0 z-40 bg-gradient-to-r from-brasil-green via-brasil-green-light to-brasil-green shadow-lg border-b-2 border-brasil-yellow/30">
+      <div className="hidden md:block sticky top-0 z-40 bg-brasil-blue shadow-lg border-t-2 border-b-2 border-white">
         <div className="px-8 py-4 max-w-7xl mx-auto">
           <CategoryMenu />
         </div>

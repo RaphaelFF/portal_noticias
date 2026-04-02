@@ -13,7 +13,7 @@ export default function NewsFeatured({ news }) {
   }
 
   return (
-    <article className="bg-gradient-to-b from-brasil-blue to-brasil-blue/90 text-white" aria-label="Manchete principal">
+    <article className="text-neutral-dark" aria-label="Manchete principal">
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Imagem - mobile em cima, desktop à esquerda */}
         <Link
@@ -38,33 +38,33 @@ export default function NewsFeatured({ news }) {
             className="group"
             tabIndex="0"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white group-hover:text-brasil-yellow transition-colors">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-brasil-blue group-hover:text-brasil-green transition-colors">
               {news.titulo}
             </h1>
           </Link>
 
           {/* Resumo */}
           {news.resumo && (
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed line-clamp-3">
+            <p className="text-lg md:text-xl text-neutral-dark/80 leading-relaxed line-clamp-3">
               {news.resumo}
             </p>
           )}
 
           {/* Byline - autor • data • fonte */}
-          <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-white/70 pt-2 border-t border-white/20">
-            <p className="font-semibold text-white">{news.autor}</p>
-            <span className="text-white/50">•</span>
-            <time className="text-white/70" dateTime={news.data_publicacao}>
+          <div className="flex flex-wrap items-center gap-3 text-sm md:text-base text-neutral-dark/70 pt-2 border-t border-neutral-dark/20">
+            <p className="font-semibold text-neutral-dark">{news.autor}</p>
+            <span className="text-neutral-dark/40">•</span>
+            <time className="text-neutral-dark/70" dateTime={news.data_publicacao}>
               {formatDate(news.data_publicacao)}
             </time>
             {news.fonte && (
               <>
-                <span className="text-white/50">•</span>
+                <span className="text-neutral-dark/40">•</span>
                 <a
                   href={news.fonte}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brasil-yellow hover:text-brasil-yellow-dark hover:underline transition-colors focus:ring-2 focus:ring-brasil-yellow focus:outline-none rounded px-1"
+                  className="text-brasil-green hover:text-brasil-green-light hover:underline transition-colors focus:ring-2 focus:ring-brasil-yellow focus:outline-none rounded px-1"
                   aria-label={`Fonte: ${news.fonte}`}
                 >
                   Fonte
