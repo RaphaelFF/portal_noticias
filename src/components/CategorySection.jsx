@@ -14,6 +14,11 @@ export default function CategorySection({ category, excludedNewsIds = [] }) {
     limit: 4,
   })
 
+  // Não renderizar nada se não houver notícias (silenciosamente, sem mensagem)
+  if (!loading && !error && news.length === 0) {
+    return null
+  }
+
   // Estado de erro
   if (error) {
     return (
@@ -30,20 +35,12 @@ export default function CategorySection({ category, excludedNewsIds = [] }) {
     )
   }
 
-  // Estado vazio ou sem notícias
-  if (!loading && news.length === 0) {
-    return (
-      <section className="bg-white px-4 py-12 md:py-16" aria-label={`Seção ${category.name}`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-h2 text-brasil-blue mb-4">{category.name}</h2>
-          <div className="bg-neutral-light rounded-lg p-8 text-center">
-            <p className="text-neutral-dark font-medium">
-              😴 Nenhuma notícia em {category.name.toLowerCase()} no momento.
-            </p>
-          </div>
-        </div>
-      </section>
-    )
+  // Estado vazio ou sem notícias - renderizar mensagem apenas em casos de erro real
+  if (!loading && error) {
+    // Apenas mostrar mensagem se houver erro
+  } else if (!loading && news.length === 0) {
+    // Categoria sem notícias - renderizar null (não mostrar nada)
+    return null
   }
 
   // Estado de loading

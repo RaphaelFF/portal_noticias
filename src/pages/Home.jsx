@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNews } from '../hooks/useNews'
 import NewsFeatured from '../components/NewsFeatured'
-import NewsGrid from '../components/NewsGrid'
+import LatestNewsSection from '../components/LatestNewsSection'
 import CategorySection from '../components/CategorySection'
 import { CATEGORIES } from '../utils/categories'
 import { ERROR_MESSAGES } from '../utils/constants'
@@ -56,9 +56,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <NewsFeatured news={data.manchetaPrincipal} />
-      <NewsGrid articles={data.noticiasSecundarias} />
       
-      {/* Seções dinâmicas de categorias */}
+      {/* Seção: Últimas Notícias (top 4, excluindo manchete) */}
+      <LatestNewsSection excludedNewsIds={[data.manchetaPrincipal.id]} />
+      
+      {/* Seções dinâmicas de categorias (apenas se tiverem notícias) */}
       {CATEGORIES.map((category) => (
         <CategorySection
           key={category.id}
