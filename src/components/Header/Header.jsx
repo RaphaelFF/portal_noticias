@@ -57,12 +57,12 @@ export default function Header() {
 
   return (
     <header
-      className="bg-gradient-to-b from-brasil-green to-brasil-green-light text-white sticky top-0 z-50 shadow-lg transition-all duration-300"
+      className="bg-gradient-to-b from-brasil-green to-brasil-green-light text-white shadow-lg transition-all duration-300"
       role="banner"
     >
       {/* Layout Mobile */}
       {isMobile && (
-        <div className="h-20 px-4 py-4 flex justify-between items-center gap-4 animate-fadeIn">
+        <div className="h-20 px-4 py-4 flex justify-between items-center gap-4 animate-fadeIn bg-gradient-to-b from-brasil-green to-brasil-green-light">
           {/* Botão Hambúrguer */}
           <button
             ref={buttonRef}
@@ -103,7 +103,7 @@ export default function Header() {
       {!isMobile && (
         <div className="px-8 py-6 max-w-7xl mx-auto animate-fadeIn">
           {/* Linha 1: Logo + Data */}
-          <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/20">
+          <div className="flex justify-between items-center pb-4">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity"
@@ -117,9 +117,6 @@ export default function Header() {
             </Link>
             <DateDisplay />
           </div>
-
-          {/* Linha 2: Menu de Categorias */}
-          <CategoryMenu />
         </div>
       )}
 

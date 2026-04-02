@@ -13,7 +13,7 @@ export function CategoryMenu() {
   const slug = location.pathname.split('/')[2]
 
   return (
-    <nav className="hidden md:flex items-center gap-2 flex-wrap" role="navigation">
+    <nav className="hidden md:flex items-center gap-2 flex-wrap text-white" role="navigation">
       {CATEGORIES.map((category) => {
         // Se for 'INICIO', redirecionar para home; senão para categoria
         const linkPath = category.id === 'inicio' ? '/' : `/categorias/${category.slug}`
