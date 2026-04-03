@@ -86,7 +86,6 @@ export default function Home() {
         <CategorySection
           key={category.id}
           category={category}
-          excludedNewsIds={featuredNewsIds}
         />
       ))}
     </main>
