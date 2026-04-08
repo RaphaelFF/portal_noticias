@@ -4,9 +4,11 @@
  * Feature 004: Layout da Manchete Principal
  */
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import FeaturedCarouselControls from './FeaturedCarouselControls'
 
 export default function FeaturedCarousel({ news = [] }) {
+  const navigate = useNavigate()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const autoPlayRef = useRef(null)
@@ -47,11 +49,18 @@ export default function FeaturedCarousel({ news = [] }) {
 
   return (
     <div
-      className="relative h-[500px] md:h-[500px] sm:h-[350px] rounded-xl overflow-hidden group"
+      className="relative h-[500px] md:h-[500px] sm:h-[350px] rounded-xl overflow-hidden group cursor-pointer"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onClick={() => navigate(`/noticias/${slide.slug}`)}
       role="region"
       aria-label="Carrossel de notícias destaque"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          navigate(`/noticias/${slide.slug}`)
+        }
+      }}
     >
       {/* Background Image */}
       <div
@@ -101,6 +110,7 @@ export default function FeaturedCarousel({ news = [] }) {
                   href={slide.fonte}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                   className="text-brasil-green hover:text-brasil-green-light transition-colors underline"
                   aria-label={`Fonte: ${slide.fonte}`}
                 >
@@ -118,7 +128,10 @@ export default function FeaturedCarousel({ news = [] }) {
           {news.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => setCurrentSlide(idx)}
+              onClick={(e) => {
+                e.stopPropagation()
+                setCurrentSlide(idx)
+              }}
               className={`w-2 h-2 rounded-full transition-all ${
                 idx === currentSlide
                   ? 'bg-brasil-yellow w-6'
