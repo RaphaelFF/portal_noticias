@@ -1,9 +1,11 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import { CategoryMenu } from './components/Header/CategoryMenu'
 import Home from './pages/Home'
 import Article from './pages/Article'
 import CategoryPage from './pages/CategoryPage'
+import AdminPanel from './pages/AdminPanel'
 
 export default function App() {
   return (
@@ -24,6 +26,7 @@ export default function App() {
         <Route path="/noticias/:slug" element={<Article />} />
         {/* Feature 002: Rota para categorias */}
         <Route path="/categorias/:slug" element={<CategoryPage />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </Router>
   )
