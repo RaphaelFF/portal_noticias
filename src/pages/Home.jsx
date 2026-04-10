@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { useNews } from '../hooks/useNews'
 import NewsFeatured from '../components/NewsFeatured'
-import NewsGrid from '../components/NewsGrid'
+import LatestNewsSection from '../components/LatestNewsSection'
+import CategorySection from '../components/CategorySection'
+import { CATEGORIES } from '../utils/categories'
 import { ERROR_MESSAGES } from '../utils/constants'
 
 export default function Home() {
@@ -51,10 +53,41 @@ export default function Home() {
     )
   }
 
+  // Preparar notícias para a manchete principal
+  // Combinar manchetaPrincipal + noticiasSecundarias
+  const allFeaturedNews = [
+    data.manchetaPrincipal,
+    ...(data.noticiasSecundarias || [])
+  ]
+
+  // Ordenar por data_publicacao (mais recentes primeiro)
+  const sortedFeaturedNews = [...allFeaturedNews].sort((a, b) => {
+    const dateA = new Date(a.data_publicacao)
+    const dateB = new Date(b.data_publicacao)
+    return dateB - dateA // Decrescente: mais recentes primeiro
+  })
+
+  // Pegar as 5 primeiras (carrossel 3 + sidebar 2)
+  const featuredNewsForCarousel = sortedFeaturedNews.slice(0, 5)
+
+  // IDs das notícias que estão na manchete (para excluir de Últimas Notícias)
+  const featuredNewsIds = featuredNewsForCarousel.map(news => news.id)
+
   return (
     <main className="min-h-screen bg-white">
-      <NewsFeatured news={data.manchetaPrincipal} />
-      <NewsGrid articles={data.noticiasSecundarias} />
+      {/* Manchete Principal com Carrossel + Sidebar (ordenado por data) */}
+      <NewsFeatured news={featuredNewsForCarousel} />
+      
+      {/* Seção: Últimas Notícias (excluindo notícias que estão na manchete) */}
+      <LatestNewsSection excludedNewsIds={featuredNewsIds} />
+      
+      {/* Seções dinâmicas de categorias (apenas se tiverem notícias) */}
+      {CATEGORIES.map((category) => (
+        <CategorySection
+          key={category.id}
+          category={category}
+        />
+      ))}
     </main>
   )
 }

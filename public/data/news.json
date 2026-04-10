@@ -12,7 +12,8 @@
     "data_publicacao": "2026-04-01T09:15:00Z",
     "ultima_atualizacao": "2026-04-01T10:30:00Z",
     "autor": "Maria Silva",
-    "fonte": "https://example.com/agencia"
+    "fonte": "https://example.com/agencia",
+    "conteudo": "Em uma votação acirrada que definiu o futuro político do país, o candidato apoiado pela maioria conquistou uma impressionante votação de 52% dos votos válidos. A apuração, que transcorreu por mais de 12 horas, foi acompanhada atentamente pela imprensa nacional e internacional. Após apuração de 95% das urnas, o resultado foi consolidado, trazendo esperança e preocupações para diferentes setores da população. O vencedor já sinalizou seus primeiros passos na gestão, focando em reforma econômica e combate à inflação. Especialistas apontam que esse resultado reflete o desejo de mudança observado nas pesquisas dos últimos meses."
   },
   "noticiasSecundarias": [
     {
@@ -22,10 +23,11 @@
       "resumo": "Índice de preços registra queda em comparação com mês anterior.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081355/3_n2vdld.jpg",
       "imagemAlt": "Gráfico de deflação",
-      "categoria": "economia",
+      "categoria": "educacao",
       "data_publicacao": "2026-03-31T14:00:00Z",
       "autor": "João Santos",
-      "fonte": "https://example.com/economia"
+      "fonte": "https://example.com/educacao",
+      "conteudo": "A inflação de março registrou uma queda significativa de 0,3 pontos percentuais em relação ao mês anterior, representando um alívio na economia doméstica. O Índice de Preços ao Consumidor (IPC) refinado mostrou especialmente redução nos setores de alimentos e energia, dois pilares essenciais da cesta de consumo. Analistas econômicos atribuem essa queda às políticas monetárias restritivas implementadas pelo banco central e à estabilização da taxa de câmbio. Mesmo com essa redução, a inflação acumulada no ano ainda permanece acima das metas estabelecidas pelas autoridades monetárias. Consumidores relatam alívio nas compras do mês, enquanto investidores observam o cenário com cautela."
     },
     {
       "id": "003",
@@ -34,10 +36,11 @@
       "resumo": "Legislação estabelece padrões de segurança e transparência.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081354/1_mar9rn.jpg",
       "imagemAlt": "Símbolo de inteligência artificial",
-      "categoria": "educacao",
+      "categoria": "economia",
       "data_publicacao": "2026-03-30T10:45:00Z",
       "autor": "Laura Mendes",
-      "fonte": "https://example.com/tecnologia"
+      "fonte": "https://example.com/tecnologia",
+      "conteudo": "Uma nova regulação abrangente para sistemas de inteligência artificial entrou em vigor no primeiro dia deste mês, estabelecendo padrões rigorosos de segurança e transparência para desenvolvedoras e usuários. A legislação foi aprovada após intensos debates entre governos, academia e indústria tech. As novas regras exigem que sistemas de IA incluam explicabilidade de decisões e responsabilidade civil. Empresas têm prazos de até 18 meses para adequação total às normas. Especialistas apontam que essa regulação pode servir de modelo para outras nações, enquanto críticos temem engessamento da inovação tecnológica."
     },
     {
       "id": "004",
@@ -46,10 +49,11 @@
       "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
       "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775081355/4_ceaorp.png",
       "imagemAlt": "Mapa de previsão meteorológica",
-      "categoria": "ambiente",
+      "categoria": "meio-ambiente",
       "data_publicacao": "2026-03-29T16:20:00Z",
       "autor": "Carlos Oliveira",
-      "fonte": "https://example.com/ciencia"
+      "fonte": "https://example.com/ciencia",
+      "conteudo": "Previsões meteorológicas indicam que o verão de 2026 será significativamente mais quente, com temperaturas chegando a 8% acima das médias históricas para o período. O fenômeno El Niño, em sua fase moderada, contribuirá para elevar as temperaturas globais e alterar padrões de precipitação. Regiões do nordeste enfrentarão maior risco de secas, enquanto o sudeste pode registrar chuvas acima do normal. Meteorologistas recomendam intensificação de medidas de proteção civil e conservação de água. A previsão levanta preocupações entre ambientalistas sobre o impacto na biodiversidade."
     },
     {
       "id": "005",
@@ -61,8 +65,218 @@
       "categoria": "esportes",
       "data_publicacao": "2026-03-28T20:30:00Z",
       "autor": "Pedro Costa",
-      "fonte": "https://example.com/esportes"
+      "fonte": "https://example.com/esportes",
+      "conteudo": "Em um jogo emocionante que levou a decisão aos pênaltis, a seleção conquistou sua passagem para a semi-final da Copa mundial. A partida contra o time europeu foi equilibrada até o final, com chances de ambos os lados. O técnico fez uma excelente gestão das substituições no segundo tempo, trazendo novo fôlego ao time. O goleiro foi praticamente herói da noite, realizando uma defesa espetacular na final da cobrança de pênaltis. A torcida comemora entusiasmada a classificação, alimentando esperanças de uma final histórica."
+    },
+    {
+      "id": "006",
+      "slug": "inflacao-marco-2026",
+      "titulo": "Inflação cai 0,3 pontos percentuais em março",
+      "resumo": "Índice de preços registra queda em comparação com mês anterior.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079853/main-sample.png",
+      "imagemAlt": "Gráfico de deflação",
+      "categoria": "educacao",
+      "data_publicacao": "2026-03-31T14:00:00Z",
+      "autor": "João Santos",
+      "fonte": "https://example.com/educacao",
+      "conteudo": "A inflação de março registrou uma queda significativa de 0,3 pontos percentuais em relação ao mês anterior, representando um alívio na economia doméstica. O Índice de Preços ao Consumidor (IPC) refinado mostrou especialmente redução nos setores de alimentos e energia, dois pilares essenciais da cesta de consumo. Analistas econômicos atribuem essa queda às políticas monetárias restritivas implementadas pelo banco central e à estabilização da taxa de câmbio. Mesmo com essa redução, a inflação acumulada no ano ainda permanece acima das metas estabelecidas pelas autoridades monetárias. Consumidores relatam alívio nas compras do mês, enquanto investidores observam o cenário com cautela."
+    },
+    {
+      "id": "007",
+      "slug": "ia-nova-regulacao",
+      "titulo": "Nova regulação para IA entra em vigor",
+      "resumo": "Legislação estabelece padrões de segurança e transparência.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079852/cld-sample-2.jpg",
+      "imagemAlt": "Símbolo de inteligência artificial",
+      "categoria": "economia",
+      "data_publicacao": "2026-03-30T10:45:00Z",
+      "autor": "Laura Mendes",
+      "fonte": "https://example.com/tecnologia",
+      "conteudo": "Uma nova regulação abrangente para sistemas de inteligência artificial entrou em vigor no primeiro dia deste mês, estabelecendo padrões rigorosos de segurança e transparência para desenvolvedoras e usuários. A legislação foi aprovada após intensos debates entre governos, academia e indústria tech. As novas regras exigem que sistemas de IA incluam explicabilidade de decisões e responsabilidade civil. Empresas têm prazos de até 18 meses para adequação total às normas. Especialistas apontam que essa regulação pode servir de modelo para outras nações, enquanto críticos temem engessamento da inovação tecnológica."
+    },
+    {
+      "id": "008",
+      "slug": "clima-projecoes-2026",
+      "titulo": "Previsões climáticas apontam verão 8% mais quente",
+      "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079837/samples/ecommerce/accessories-bag.jpg",
+      "imagemAlt": "Mapa de previsão meteorológica",
+      "categoria": "meio-ambiente",
+      "data_publicacao": "2026-03-29T16:20:00Z",
+      "autor": "Carlos Oliveira",
+      "fonte": "https://example.com/ciencia",
+      "conteudo": "Previsões meteorológicas indicam que o verão de 2026 será significativamente mais quente, com temperaturas chegando a 8% acima das médias históricas para o período. O fenômeno El Niño, em sua fase moderada, contribuirá para elevar as temperaturas globais e alterar padrões de precipitação. Regiões do nordeste enfrentarão maior risco de secas, enquanto o sudeste pode registrar chuvas acima do normal. Meteorologistas recomendam intensificação de medidas de proteção civil e conservação de água. A previsão levanta preocupações entre ambientalistas sobre o impacto na biodiversidade."
+    },
+    {
+      "id": "009",
+      "slug": "esporte-copa-mundial",
+      "titulo": "Seleção avança para semi-final da Copa",
+      "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079833/samples/food/fish-vegetables.jpg",
+      "imagemAlt": "Jogador comemorando gol",
+      "categoria": "esportes",
+      "data_publicacao": "2026-03-28T20:30:00Z",
+      "autor": "Pedro Costa",
+      "fonte": "https://example.com/esportes",
+      "conteudo": "Em um jogo emocionante que levou a decisão aos pênaltis, a seleção conquistou sua passagem para a semi-final da Copa mundial. A partida contra o time europeu foi equilibrada até o final, com chances de ambos os lados. O técnico fez uma excelente gestão das substituições no segundo tempo, trazendo novo fôlego ao time. O goleiro foi praticamente herói da noite, realizando uma defesa espetacular na final da cobrança de pênaltis. A torcida comemora entusiasmada a classificação, alimentando esperanças de uma final histórica."
+    },
+    {
+      "id": "010",
+      "slug": "inflacao-marco-2026",
+      "titulo": "Inflação cai 0,3 pontos percentuais em março",
+      "resumo": "Índice de preços registra queda em comparação com mês anterior.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079853/cld-sample-5.jpg",
+      "imagemAlt": "Gráfico de deflação",
+      "categoria": "educacao",
+      "data_publicacao": "2026-03-31T14:00:00Z",
+      "autor": "João Santos",
+      "fonte": "https://example.com/educacao",
+      "conteudo": "A inflação de março registrou uma queda significativa de 0,3 pontos percentuais em relação ao mês anterior, representando um alívio na economia doméstica. O Índice de Preços ao Consumidor (IPC) refinado mostrou especialmente redução nos setores de alimentos e energia, dois pilares essenciais da cesta de consumo. Analistas econômicos atribuem essa queda às políticas monetárias restritivas implementadas pelo banco central e à estabilização da taxa de câmbio. Mesmo com essa redução, a inflação acumulada no ano ainda permanece acima das metas estabelecidas pelas autoridades monetárias. Consumidores relatam alívio nas compras do mês, enquanto investidores observam o cenário com cautela."
+    },
+    {
+      "id": "011",
+      "slug": "ia-nova-regulacao",
+      "titulo": "Nova regulação para IA entra em vigor",
+      "resumo": "Legislação estabelece padrões de segurança e transparência.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079852/cld-sample.jpg",
+      "imagemAlt": "Símbolo de inteligência artificial",
+      "categoria": "economia",
+      "data_publicacao": "2026-03-30T10:45:00Z",
+      "autor": "Laura Mendes",
+      "fonte": "https://example.com/tecnologia",
+      "conteudo": "Uma nova regulação abrangente para sistemas de inteligência artificial entrou em vigor no primeiro dia deste mês, estabelecendo padrões rigorosos de segurança e transparência para desenvolvedoras e usuários. A legislação foi aprovada após intensos debates entre governos, academia e indústria tech. As novas regras exigem que sistemas de IA incluam explicabilidade de decisões e responsabilidade civil. Empresas têm prazos de até 18 meses para adequação total às normas. Especialistas apontam que essa regulação pode servir de modelo para outras nações, enquanto críticos temem engessamento da inovação tecnológica."
+    },
+    {
+      "id": "012",
+      "slug": "clima-projecoes-2026",
+      "titulo": "Previsões climáticas apontam verão 8% mais quente",
+      "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079837/samples/ecommerce/leather-bag-gray.jpg",
+      "imagemAlt": "Mapa de previsão meteorológica",
+      "categoria": "meio-ambiente",
+      "data_publicacao": "2026-03-29T16:20:00Z",
+      "autor": "Carlos Oliveira",
+      "fonte": "https://example.com/ciencia",
+      "conteudo": "Previsões meteorológicas indicam que o verão de 2026 será significativamente mais quente, com temperaturas chegando a 8% acima das médias históricas para o período. O fenômeno El Niño, em sua fase moderada, contribuirá para elevar as temperaturas globais e alterar padrões de precipitação. Regiões do nordeste enfrentarão maior risco de secas, enquanto o sudeste pode registrar chuvas acima do normal. Meteorologistas recomendam intensificação de medidas de proteção civil e conservação de água. A previsão levanta preocupações entre ambientalistas sobre o impacto na biodiversidade."
+    },
+    {
+      "id": "013",
+      "slug": "esporte-copa-mundial",
+      "titulo": "Seleção avança para semi-final da Copa",
+      "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079831/samples/food/dessert.jpg",
+      "imagemAlt": "Jogador comemorando gol",
+      "categoria": "esportes",
+      "data_publicacao": "2026-03-28T20:30:00Z",
+      "autor": "Pedro Costa",
+      "fonte": "https://example.com/esportes",
+      "conteudo": "Em um jogo emocionante que levou a decisão aos pênaltis, a seleção conquistou sua passagem para a semi-final da Copa mundial. A partida contra o time europeu foi equilibrada até o final, com chances de ambos os lados. O técnico fez uma excelente gestão das substituições no segundo tempo, trazendo novo fôlego ao time. O goleiro foi praticamente herói da noite, realizando uma defesa espetacular na final da cobrança de pênaltis. A torcida comemora entusiasmada a classificação, alimentando esperanças de uma final histórica."
+    },
+    {
+      "id": "014",
+      "slug": "inflacao-marco-2026",
+      "titulo": "Inflação cai 0,3 pontos percentuais em março",
+      "resumo": "Índice de preços registra queda em comparação com mês anterior.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079853/cld-sample-4.jpg",
+      "imagemAlt": "Gráfico de deflação",
+      "categoria": "educacao",
+      "data_publicacao": "2026-03-31T14:00:00Z",
+      "autor": "João Santos",
+      "fonte": "https://example.com/educacao",
+      "conteudo": "A inflação de março registrou uma queda significativa de 0,3 pontos percentuais em relação ao mês anterior, representando um alívio na economia doméstica. O Índice de Preços ao Consumidor (IPC) refinado mostrou especialmente redução nos setores de alimentos e energia, dois pilares essenciais da cesta de consumo. Analistas econômicos atribuem essa queda às políticas monetárias restritivas implementadas pelo banco central e à estabilização da taxa de câmbio. Mesmo com essa redução, a inflação acumulada no ano ainda permanece acima das metas estabelecidas pelas autoridades monetárias. Consumidores relatam alívio nas compras do mês, enquanto investidores observam o cenário com cautela."
+    },
+    {
+      "id": "015",
+      "slug": "ia-nova-regulacao",
+      "titulo": "Nova regulação para IA entra em vigor",
+      "resumo": "Legislação estabelece padrões de segurança e transparência.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079836/samples/animals/three-dogs.jpg",
+      "imagemAlt": "Símbolo de inteligência artificial",
+      "categoria": "economia",
+      "data_publicacao": "2026-03-30T10:45:00Z",
+      "autor": "Laura Mendes",
+      "fonte": "https://example.com/tecnologia",
+      "conteudo": "Uma nova regulação abrangente para sistemas de inteligência artificial entrou em vigor no primeiro dia deste mês, estabelecendo padrões rigorosos de segurança e transparência para desenvolvedoras e usuários. A legislação foi aprovada após intensos debates entre governos, academia e indústria tech. As novas regras exigem que sistemas de IA incluam explicabilidade de decisões e responsabilidade civil. Empresas têm prazos de até 18 meses para adequação total às normas. Especialistas apontam que essa regulação pode servir de modelo para outras nações, enquanto críticos temem engessamento da inovação tecnológica."
+    },
+    {
+      "id": "016",
+      "slug": "clima-projecoes-2026",
+      "titulo": "Previsões climáticas apontam verão 8% mais quente",
+      "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079838/samples/food/spices.jpg",
+      "imagemAlt": "Mapa de previsão meteorológica",
+      "categoria": "meio-ambiente",
+      "data_publicacao": "2026-03-29T16:20:00Z",
+      "autor": "Carlos Oliveira",
+      "fonte": "https://example.com/ciencia",
+      "conteudo": "Previsões meteorológicas indicam que o verão de 2026 será significativamente mais quente, com temperaturas chegando a 8% acima das médias históricas para o período. O fenômeno El Niño, em sua fase moderada, contribuirá para elevar as temperaturas globais e alterar padrões de precipitação. Regiões do nordeste enfrentarão maior risco de secas, enquanto o sudeste pode registrar chuvas acima do normal. Meteorologistas recomendam intensificação de medidas de proteção civil e conservação de água. A previsão levanta preocupações entre ambientalistas sobre o impacto na biodiversidade."
+    },
+    {
+      "id": "017",
+      "slug": "esporte-copa-mundial",
+      "titulo": "Seleção avança para semi-final da Copa",
+      "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079838/samples/landscapes/nature-mountains.jpg",
+      "imagemAlt": "Jogador comemorando gol",
+      "categoria": "esportes",
+      "data_publicacao": "2026-03-28T20:30:00Z",
+      "autor": "Pedro Costa",
+      "fonte": "https://example.com/esportes",
+      "conteudo": "Em um jogo emocionante que levou a decisão aos pênaltis, a seleção conquistou sua passagem para a semi-final da Copa mundial. A partida contra o time europeu foi equilibrada até o final, com chances de ambos os lados. O técnico fez uma excelente gestão das substituições no segundo tempo, trazendo novo fôlego ao time. O goleiro foi praticamente herói da noite, realizando uma defesa espetacular na final da cobrança de pênaltis. A torcida comemora entusiasmada a classificação, alimentando esperanças de uma final histórica."
+    },
+    {
+      "id": "018",
+      "slug": "inflacao-marco-2026",
+      "titulo": "Inflação cai 0,3 pontos percentuais em março",
+      "resumo": "Índice de preços registra queda em comparação com mês anterior.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079853/cld-sample-3.jpg",
+      "imagemAlt": "Gráfico de deflação",
+      "categoria": "educacao",
+      "data_publicacao": "2026-03-31T14:00:00Z",
+      "autor": "João Santos",
+      "fonte": "https://example.com/educacao",
+      "conteudo": "A inflação de março registrou uma queda significativa de 0,3 pontos percentuais em relação ao mês anterior, representando um alívio na economia doméstica. O Índice de Preços ao Consumidor (IPC) refinado mostrou especialmente redução nos setores de alimentos e energia, dois pilares essenciais da cesta de consumo. Analistas econômicos atribuem essa queda às políticas monetárias restritivas implementadas pelo banco central e à estabilização da taxa de câmbio. Mesmo com essa redução, a inflação acumulada no ano ainda permanece acima das metas estabelecidas pelas autoridades monetárias. Consumidores relatam alívio nas compras do mês, enquanto investidores observam o cenário com cautela."
+    },
+    {
+      "id": "019",
+      "slug": "ia-nova-regulacao",
+      "titulo": "Nova regulação para IA entra em vigor",
+      "resumo": "Legislação estabelece padrões de segurança e transparência.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079833/samples/animals/reindeer.jpg",
+      "imagemAlt": "Símbolo de inteligência artificial",
+      "categoria": "educacao",
+      "data_publicacao": "2026-03-30T10:45:00Z",
+      "autor": "Laura Mendes",
+      "fonte": "https://example.com/tecnologia",
+      "conteudo": "Uma nova regulação abrangente para sistemas de inteligência artificial entrou em vigor no primeiro dia deste mês, estabelecendo padrões rigorosos de segurança e transparência para desenvolvedoras e usuários. A legislação foi aprovada após intensos debates entre governos, academia e indústria tech. As novas regras exigem que sistemas de IA incluam explicabilidade de decisões e responsabilidade civil. Empresas têm prazos de até 18 meses para adequação total às normas. Especialistas apontam que essa regulação pode servir de modelo para outras nações, enquanto críticos temem engessamento da inovação tecnológica."
+    },
+    {
+      "id": "020",
+      "slug": "clima-projecoes-2026",
+      "titulo": "Previsões climáticas apontam verão 8% mais quente",
+      "resumo": "Meteorologistas indicam fenômeno El Niño influenciará condições.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079834/samples/food/pot-mussels.jpg",
+      "imagemAlt": "Mapa de previsão meteorológica",
+      "categoria": "meio-ambiente",
+      "data_publicacao": "2026-03-29T16:20:00Z",
+      "autor": "Carlos Oliveira",
+      "fonte": "https://example.com/ciencia",
+      "conteudo": "Previsões meteorológicas indicam que o verão de 2026 será significativamente mais quente, com temperaturas chegando a 8% acima das médias históricas para o período. O fenômeno El Niño, em sua fase moderada, contribuirá para elevar as temperaturas globais e alterar padrões de precipitação. Regiões do nordeste enfrentarão maior risco de secas, enquanto o sudeste pode registrar chuvas acima do normal. Meteorologistas recomendam intensificação de medidas de proteção civil e conservação de água. A previsão levanta preocupações entre ambientalistas sobre o impacto na biodiversidade."
+    },
+    {
+      "id": "021",
+      "slug": "esporte-copa-mundial",
+      "titulo": "Seleção avança para semi-final da Copa",
+      "resumo": "Vitória emocionante nos pênaltis garante próxima fase.",
+      "imagem": "https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775079836/samples/landscapes/architecture-signs.jpg",
+      "imagemAlt": "Jogador comemorando gol",
+      "categoria": "esportes",
+      "data_publicacao": "2026-03-28T20:30:00Z",
+      "autor": "Pedro Costa",
+      "fonte": "https://example.com/esportes",
+      "conteudo": "Em um jogo emocionante que levou a decisão aos pênaltis, a seleção conquistou sua passagem para a semi-final da Copa mundial. A partida contra o time europeu foi equilibrada até o final, com chances de ambos os lados. O técnico fez uma excelente gestão das substituições no segundo tempo, trazendo novo fôlego ao time. O goleiro foi praticamente herói da noite, realizando uma defesa espetacular na final da cobrança de pênaltis. A torcida comemora entusiasmada a classificação, alimentando esperanças de uma final histórica."
     }
+
   ],
   "ultimaAtualizacao": "2026-04-01T15:00:00Z",
   "versao": "1.0.0"

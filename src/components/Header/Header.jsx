@@ -9,6 +9,7 @@ import { useMediaQuery } from '../../hooks/useMediaQuery'
 import { DateDisplay } from './DateDisplay'
 import { CategoryMenu } from './CategoryMenu'
 import { MobileMenu } from './MobileMenu'
+import SocialLinks from './SocialLinks'
 import { SITE_NAME } from '../../utils/categories'
 
 export default function Header() {
@@ -57,53 +58,71 @@ export default function Header() {
 
   return (
     <header
-      className="bg-gradient-to-b from-brasil-green to-brasil-green-light text-white sticky top-0 z-50 shadow-lg transition-all duration-300"
+      className="bg-brasil-blue text-white shadow-lg transition-all duration-300"
       role="banner"
     >
       {/* Layout Mobile */}
       {isMobile && (
-        <div className="h-20 px-4 py-4 flex justify-between items-center gap-4 animate-fadeIn">
-          {/* Botão Hambúrguer */}
-          <button
-            ref={buttonRef}
-            onClick={toggleMenu}
-            className={`text-2xl p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brasil-yellow focus:ring-offset-2 focus:ring-offset-brasil-green rounded ${
-              isMenuOpen
-                ? 'text-brasil-yellow rotate-90'
-                : 'text-white hover:text-brasil-yellow active:scale-95'
-            }`}
-            aria-label="Abrir menu de navegação"
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            ☰
-          </button>
+        <>
+          <div className="h-20 px-4 py-4 flex justify-between items-center gap-4 animate-fadeIn bg-brasil-blue">
+            {/* Botão Hambúrguer */}
+            <button
+              ref={buttonRef}
+              onClick={toggleMenu}
+              className={`text-2xl p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brasil-yellow focus:ring-offset-2 focus:ring-offset-brasil-green rounded ${
+                isMenuOpen
+                  ? 'text-brasil-yellow rotate-90'
+                  : 'text-white hover:text-brasil-yellow active:scale-95'
+              }`}
+              aria-label="Abrir menu de navegação"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              ☰
+            </button>
 
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex-1 flex justify-center hover:opacity-80 transition-opacity"
-            title="Voltar para página inicial"
-          >
-            <img
-              src="https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775149573/logo_1_pnelx9.png"
-              alt="Logo - Portal de Notícias"
-              className="h-12 object-contain"
-            />
-          </Link>
+            {/* Logo */}
+            <Link
+              to="/"
+              className="flex-1 flex justify-center hover:opacity-80 transition-opacity"
+              title="Voltar para página inicial"
+            >
+              <img
+                src="https://res.cloudinary.com/dgacxy9ga/image/upload/q_auto/f_auto/v1775149573/logo_1_pnelx9.png"
+                alt="Logo - Portal de Notícias"
+                className="h-12 object-contain"
+              />
+            </Link>
 
-          {/* Data (menor em mobile) */}
-          <div className="text-xs text-white/80 whitespace-nowrap font-medium">
-            <DateDisplay />
+            {/* Data (menor em mobile) */}
+            <div className="text-xs text-white/80 whitespace-nowrap font-medium">
+              <DateDisplay />
+            </div>
           </div>
-        </div>
+
+          {/* Redes Sociais Mobile */}
+          <div className="px-4 py-3 flex justify-center border-t border-white/20 bg-brasil-blue">
+            <div className="flex gap-4 text-lg">
+              {[
+                { name: 'YouTube', icon: '📺' },
+                { name: 'Facebook', icon: 'f' },
+                { name: 'Instagram', icon: '📸' },
+                { name: 'App Store', icon: '🍎' }
+              ].map((social, idx) => (
+                <span key={idx} className="text-white opacity-70 text-sm">
+                  {social.icon}
+                </span>
+              ))}
+            </div>
+          </div>
+        </>
       )}
 
       {/* Layout Desktop */}
       {!isMobile && (
         <div className="px-8 py-6 max-w-7xl mx-auto animate-fadeIn">
-          {/* Linha 1: Logo + Data */}
-          <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/20">
+          {/* Linha 1: Logo + Redes Sociais + Data */}
+          <div className="flex justify-between items-center">
             <Link
               to="/"
               className="hover:opacity-80 transition-opacity"
@@ -115,11 +134,9 @@ export default function Header() {
                 className="h-32 object-contain"
               />
             </Link>
+            <SocialLinks />
             <DateDisplay />
           </div>
-
-          {/* Linha 2: Menu de Categorias */}
-          <CategoryMenu />
         </div>
       )}
 

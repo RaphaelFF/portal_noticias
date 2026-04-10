@@ -2,7 +2,7 @@
 // Feature 002: Header/Navbar
 
 export const CATEGORIES = [
-  { id: 'ultimas', name: 'ÚLTIMAS NOTÍCIAS', slug: 'ultimas' },
+  { id: 'inicio', name: 'INICIO', slug: 'inicio' },
   { id: 'cultura', name: 'CULTURA', slug: 'cultura' },
   { id: 'economia', name: 'ECONOMIA', slug: 'economia' },
   { id: 'educacao', name: 'EDUCAÇÃO', slug: 'educacao' },
